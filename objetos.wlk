@@ -20,7 +20,7 @@ object muneco {
 
   var pesoActual = 10
 
-  method peso() = valorPeso
+  method peso() = pesoActual
   method color() = celeste
   method material() = vidrio
 
@@ -43,6 +43,38 @@ object placa {
   method cambiarPeso(pesoNuevo) {
     pesoActual = pesoNuevo
   }
+}
+
+object arito {
+  method material() = cobre
+  method color() = celeste
+  method peso() = 180
+}
+
+object banquito {
+  var colorActual = naranja
+
+  method material() = madera
+  method peso() = 1700
+  method color() = colorActual
+
+  method cambiarColor(colorNuevo) {
+    colorActual = colorNuevo
+  }
+}
+
+object cajita {
+  var objetoDentro = remera 
+  var pesoActual = 400 + objetoDentro.peso()
+
+  method material() = cobre 
+  method color() = rojo 
+  method peso() = pesoActual
+
+  method cambiarObjeto(objetoNuevo) {
+    objetoDentro = objetoNuevo
+    pesoActual = 400 + objetoDentro.peso()
+  } 
 }
 
 object bolichito {
@@ -97,6 +129,10 @@ object celeste {
 
 object pardo {
   method esFuerte() = false
+}
+
+object naranja {
+  method esFuerte() = true 
 }
 
 object cobre {
